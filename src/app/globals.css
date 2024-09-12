@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background: #171717;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  color: rgb(var(--foreground-rgb));
+}
+
+.bg-size-mobile {
+  background-size: 300%;
+}
+
+@media (min-width: 1024px) {
+  /* Tailwind's `lg` breakpoint */
+  .bg-size-desktop {
+    background-size: 100%;
+  }
+}
+
+.gradientText {
+  background-image: linear-gradient(
+    to right top,
+    #a8390d,
+    #b1500f,
+    #b01d13,
+    #af1c1c,
+    #ff0000
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradientText2 {
+  background-image: linear-gradient(
+    to right top,
+    #a8390d,
+    #b1500f,
+    #b01d13,
+    #af1c1c,
+    #ff0000
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.primary-gradient {
+  background-image: linear-gradient(
+    to right top,
+    #a8390d,
+    #b1500f,
+    #b01d13,
+    #af1c1c,
+    #ff0000
+  );
+}
+
+.primary-gradient :hover {
+  background-image: linear-gradient(
+    to right top,
+    #12b10a,
+    #0fb12d,
+    #13b042,
+    #1caf52,
+    #27ae60
+  );
+}
+
+/* flip card */
+
+.card {
+  perspective: 800px;
+}
+.card__content {
+  transform-style: preserve-3d;
+}
+.card:hover .card__content {
+  transform: rotateY(0.5turn);
+}
+
+.card__front,
+.card__back {
+  backface-visibility: hidden;
+}
+.card__back {
+  transform: rotateY(0.5turn);
+}
